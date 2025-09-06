@@ -1,35 +1,56 @@
-#Solucion del parcial corte1 
- ##Paso a Paso del ejercicio estructural 
- 
- El codigo presentaba un error en su ultimo print el cual era
- **"print(maximo(nums)"**
- El cual para solucionarlo solo era cerrar la instruccion del print ya que solo se tenia la cadena abierta y no se habia cerrado
- para terminar con un print tal que asi:
- **"print(maximo(nums))"**
+# Solución del Parcial Corte 1
 
+## Paso a Paso del ejercicio estructural
 
- ##Paso a paso del ejercicio de oop
+El código presentaba un error en su último `print`, que era:
 
- El codigo presentaba varios errores los cuales dos de ellos estaban en los prints:
- **"print('Hace un sonido')"**
- el cual para solucionarlo nos faltaria el f-string y el self, para que quede asi:
- **"print(f'{self.especie} Hace un sonido')"**
+```python
+print(maximo(nums)
 
- El segundo print tenia el mismo error del f-string, estaba asi:
- **"print( 'Guau !')"**
- Y ahora quedaria asi:
- print(f' {self.especie} Guau!')
+Para solucionarlo, solo era necesario cerrar correctamente la instrucción del print, quedando así:
 
- Por ultimo se le añadio un **"if __name__ == "__main__":"**
- ya que se tenia en el codigo lo siguiente:
- **p = Perro('canino')
- p.hablar**
- Por lo tanto a la hora de correr el codigo no salia nada, entonces tambien se hizo un arreglo ahi 
- **if __name__ == "__main__":
-  animal = Animal ("bulldog")
-  animal.hablar()
-  animal = Perro("bulldog")
-  animal.hablar()**
- dandole a la clase Animal una especie y el motodo hablar tambien perro heredando de animal y definiendo el metodo de hablar. 
+print(maximo(nums))
+
+Paso a Paso del ejercicio de OOP
+
+El código presentaba varios errores, dos de ellos estaban en los print:
+
+En el primer print:
+
+print('Hace un sonido')
+
+Para solucionarlo, hacía falta usar una f-string con self, quedando así:
+
+print(f'{self.especie} Hace un sonido')
+
+En el segundo print:
+
+print('Guau!')
+
+Tenía el mismo error por falta de f-string, y quedó así:
+
+print(f'{self.especie} Guau!')
+
+Por último, se añadió:
+
+if __name__ == "__main__":
+
+Ya que el código original tenía:
+
+p = Perro('canino')
+p.hablar
+
+Por lo tanto, al correr el código no salía nada porque no se llamaba el método ni se usaba el bloque principal.
+
+Entonces se arregló el código de esta manera:
+
+if __name__ == "__main__":
+    animal = Animal("bulldog")
+    animal.hablar()
+
+    animal = Perro("bulldog")
+    animal.hablar()
+
+Dándole a la clase Animal una especie y el método hablar, y a la clase Perro (que hereda de Animal) definiendo su propio método hablar.
 
  
